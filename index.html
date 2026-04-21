@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1c1e21;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #4b4f56;
+            font-weight: 600;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: #1877f2;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #1877f2;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #166fe5;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #1877f2;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+        <h2>Đăng Nhập</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email hoặc Tên đăng nhập</label>
+                <input type="text" id="email" placeholder="Nhập email..." required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password" placeholder="Nhập mật khẩu..." required>
+            </div>
+            <button type="submit">Đăng Nhập</button>
+        </form>
+        <div class="footer">
+            <a href="#">Quên mật khẩu?</a> · <a href="#">Đăng ký</a>
+        </div>
+    </div>
+
+    <script>
+        // Xử lý sự kiện khi bấm nút (cho bạn dễ vọc vạch)
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const pass = document.getElementById('password').value;
+            alert(`Đang đăng nhập với: ${email}`);
+        });
+    </script>
+
+</body>
+
+</html>
